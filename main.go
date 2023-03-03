@@ -6,6 +6,9 @@ func main(){
 	ej1()
 	ej2()
 	ej4()
+	ej5()
+	ej6()
+
 }
 
 func ej1(){
@@ -32,4 +35,24 @@ func ej4(){
 	fmt.Println("After bit swiching")
 	b:= a<<1
 	fmt.Printf("%d\t%b\t%#x\n",b,b,b)
+}
+func ej5(){
+	//You can use raw straight variables
+	a:= `this is a string that can have 
+multiples lines and it also can have this "Look at it" `
+	fmt.Println(a)
+}
+func ej6(){
+	const(
+		a = 2023 + iota
+		b = 2023+iota
+		c = 2023+ iota
+		d= 2023+iota
+	)
+	//IOTA still work :)
+	fmt.Println("This is the exercise 6")
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
 }
