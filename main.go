@@ -3,11 +3,7 @@ package main
 import("fmt")
 
 func main(){
-	ej1()
-	ej2()
-	ej4()
-	ej5()
-	ej6()
+	dataGruping()
 
 }
 
@@ -55,4 +51,31 @@ func ej6(){
 	fmt.Println(b)
 	fmt.Println(c)
 	fmt.Println(d)
+}
+
+func dataGruping(){
+	//X := type{Values}//Composite Literal
+	x := []int {4,5,6,7,8}
+	fmt.Println(x)
+	fmt.Println(len(x))
+	fmt.Print(x[4]) //Indes Position
+
+	//To loop through Slice
+	fmt.Println("To loop through Slice")
+	for i, v := range x{
+		fmt.Printf("Position: %d, Value: %d\n", i,v )
+	}
+	//Slicin an Slice 
+	fmt.Println("Slice an Slice")
+	fmt.Println(x[1:])
+	fmt.Println(x[0:2])
+	//APend a Slice
+	fmt.Println("The y slice is append to the X array")
+	y := []int{1212,313,234234,234,45345}
+	x = append(x, y...)
+	fmt.Println(x)
+	//Deleting from a Slice 
+	fmt.Println("To Delete from a slice you need to apeend it with the respectives Position")
+	x = append(x[:2], x[4:]...)
+	fmt.Println(x)
 }
